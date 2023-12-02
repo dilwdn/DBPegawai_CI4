@@ -1,0 +1,308 @@
+ERROR - 2023-12-02 02:11:35 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'curd' in C:\xampp\htdocs\Pendaftaran_CI4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 C:\xampp\htdocs\Pendaftaran_CI4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'curd', 3306, '', 0)
+#1 C:\xampp\htdocs\Pendaftaran_CI4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\Pendaftaran_CI4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\Pendaftaran_CI4\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\Pendaftaran_CI4\vendor\codeigniter4\framework\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Pendaftaran_CI4\vendor\codeigniter4\framework\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\Pendaftaran_CI4\app\Models\AdminModel.php(22): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\Pendaftaran_CI4\app\Controllers\Auth.php(23): App\Models\AdminModel->getAdminByUsername('dillawahdana@gm...')
+#8 C:\xampp\htdocs\Pendaftaran_CI4\vendor\codeigniter4\framework\system\CodeIgniter.php(942): App\Controllers\Auth->processLogin()
+#9 C:\xampp\htdocs\Pendaftaran_CI4\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#10 C:\xampp\htdocs\Pendaftaran_CI4\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\Pendaftaran_CI4\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\Pendaftaran_CI4\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'curd' in C:\xampp\htdocs\Pendaftaran_CI4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\xampp\htdocs\Pendaftaran_CI4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\Pendaftaran_CI4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\Pendaftaran_CI4\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\Pendaftaran_CI4\vendor\codeigniter4\framework\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\Pendaftaran_CI4\vendor\codeigniter4\framework\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#5 C:\xampp\htdocs\Pendaftaran_CI4\app\Models\AdminModel.php(22): CodeIgniter\BaseModel->first()
+#6 C:\xampp\htdocs\Pendaftaran_CI4\app\Controllers\Auth.php(23): App\Models\AdminModel->getAdminByUsername('dillawahdana@gm...')
+#7 C:\xampp\htdocs\Pendaftaran_CI4\vendor\codeigniter4\framework\system\CodeIgniter.php(942): App\Controllers\Auth->processLogin()
+#8 C:\xampp\htdocs\Pendaftaran_CI4\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#9 C:\xampp\htdocs\Pendaftaran_CI4\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\Pendaftaran_CI4\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\Pendaftaran_CI4\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2023-12-02 02:11:35 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'curd'
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `admin`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Models\AdminModel.php(22): CodeIgniter\BaseModel->first()
+ 6 APPPATH\Controllers\Auth.php(23): App\Models\AdminModel->getAdminByUsername('dillawahdana@gmail.com')
+ 7 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Auth->processLogin()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Pendaftaran_CI4\\public\\index.php')
+ERROR - 2023-12-02 02:14:48 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'curd' in C:\xampp\htdocs\Pendaftaran_CI4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 C:\xampp\htdocs\Pendaftaran_CI4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'curd', 3306, '', 0)
+#1 C:\xampp\htdocs\Pendaftaran_CI4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\Pendaftaran_CI4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\Pendaftaran_CI4\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\Pendaftaran_CI4\vendor\codeigniter4\framework\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Pendaftaran_CI4\vendor\codeigniter4\framework\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\Pendaftaran_CI4\app\Models\AdminModel.php(22): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\Pendaftaran_CI4\app\Controllers\Auth.php(23): App\Models\AdminModel->getAdminByUsername('enwoo_97')
+#8 C:\xampp\htdocs\Pendaftaran_CI4\vendor\codeigniter4\framework\system\CodeIgniter.php(942): App\Controllers\Auth->processLogin()
+#9 C:\xampp\htdocs\Pendaftaran_CI4\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#10 C:\xampp\htdocs\Pendaftaran_CI4\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\Pendaftaran_CI4\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\Pendaftaran_CI4\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'curd' in C:\xampp\htdocs\Pendaftaran_CI4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\xampp\htdocs\Pendaftaran_CI4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\Pendaftaran_CI4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\Pendaftaran_CI4\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\Pendaftaran_CI4\vendor\codeigniter4\framework\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\Pendaftaran_CI4\vendor\codeigniter4\framework\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#5 C:\xampp\htdocs\Pendaftaran_CI4\app\Models\AdminModel.php(22): CodeIgniter\BaseModel->first()
+#6 C:\xampp\htdocs\Pendaftaran_CI4\app\Controllers\Auth.php(23): App\Models\AdminModel->getAdminByUsername('enwoo_97')
+#7 C:\xampp\htdocs\Pendaftaran_CI4\vendor\codeigniter4\framework\system\CodeIgniter.php(942): App\Controllers\Auth->processLogin()
+#8 C:\xampp\htdocs\Pendaftaran_CI4\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#9 C:\xampp\htdocs\Pendaftaran_CI4\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\Pendaftaran_CI4\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\Pendaftaran_CI4\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2023-12-02 02:14:48 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'curd'
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `admin`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Models\AdminModel.php(22): CodeIgniter\BaseModel->first()
+ 6 APPPATH\Controllers\Auth.php(23): App\Models\AdminModel->getAdminByUsername('enwoo_97')
+ 7 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Auth->processLogin()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Pendaftaran_CI4\\public\\index.php')
+ERROR - 2023-12-02 02:14:54 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'curd' in C:\xampp\htdocs\Pendaftaran_CI4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 C:\xampp\htdocs\Pendaftaran_CI4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'curd', 3306, '', 0)
+#1 C:\xampp\htdocs\Pendaftaran_CI4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\Pendaftaran_CI4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\Pendaftaran_CI4\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\Pendaftaran_CI4\vendor\codeigniter4\framework\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Pendaftaran_CI4\vendor\codeigniter4\framework\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\Pendaftaran_CI4\app\Models\AdminModel.php(22): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\Pendaftaran_CI4\app\Controllers\Auth.php(23): App\Models\AdminModel->getAdminByUsername('enwoo_97')
+#8 C:\xampp\htdocs\Pendaftaran_CI4\vendor\codeigniter4\framework\system\CodeIgniter.php(942): App\Controllers\Auth->processLogin()
+#9 C:\xampp\htdocs\Pendaftaran_CI4\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#10 C:\xampp\htdocs\Pendaftaran_CI4\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\Pendaftaran_CI4\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\Pendaftaran_CI4\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'curd' in C:\xampp\htdocs\Pendaftaran_CI4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\xampp\htdocs\Pendaftaran_CI4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\Pendaftaran_CI4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\Pendaftaran_CI4\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\Pendaftaran_CI4\vendor\codeigniter4\framework\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\Pendaftaran_CI4\vendor\codeigniter4\framework\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#5 C:\xampp\htdocs\Pendaftaran_CI4\app\Models\AdminModel.php(22): CodeIgniter\BaseModel->first()
+#6 C:\xampp\htdocs\Pendaftaran_CI4\app\Controllers\Auth.php(23): App\Models\AdminModel->getAdminByUsername('enwoo_97')
+#7 C:\xampp\htdocs\Pendaftaran_CI4\vendor\codeigniter4\framework\system\CodeIgniter.php(942): App\Controllers\Auth->processLogin()
+#8 C:\xampp\htdocs\Pendaftaran_CI4\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#9 C:\xampp\htdocs\Pendaftaran_CI4\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\Pendaftaran_CI4\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\Pendaftaran_CI4\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2023-12-02 02:14:54 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'curd'
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `admin`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Models\AdminModel.php(22): CodeIgniter\BaseModel->first()
+ 6 APPPATH\Controllers\Auth.php(23): App\Models\AdminModel->getAdminByUsername('enwoo_97')
+ 7 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Auth->processLogin()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Pendaftaran_CI4\\public\\index.php')
+ERROR - 2023-12-02 02:14:57 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'curd' in C:\xampp\htdocs\Pendaftaran_CI4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 C:\xampp\htdocs\Pendaftaran_CI4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'curd', 3306, '', 0)
+#1 C:\xampp\htdocs\Pendaftaran_CI4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\Pendaftaran_CI4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\Pendaftaran_CI4\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\Pendaftaran_CI4\vendor\codeigniter4\framework\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Pendaftaran_CI4\vendor\codeigniter4\framework\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\Pendaftaran_CI4\app\Models\AdminModel.php(22): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\Pendaftaran_CI4\app\Controllers\Auth.php(23): App\Models\AdminModel->getAdminByUsername('enwoo_97')
+#8 C:\xampp\htdocs\Pendaftaran_CI4\vendor\codeigniter4\framework\system\CodeIgniter.php(942): App\Controllers\Auth->processLogin()
+#9 C:\xampp\htdocs\Pendaftaran_CI4\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#10 C:\xampp\htdocs\Pendaftaran_CI4\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\Pendaftaran_CI4\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\Pendaftaran_CI4\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'curd' in C:\xampp\htdocs\Pendaftaran_CI4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\xampp\htdocs\Pendaftaran_CI4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\Pendaftaran_CI4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\Pendaftaran_CI4\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\Pendaftaran_CI4\vendor\codeigniter4\framework\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\Pendaftaran_CI4\vendor\codeigniter4\framework\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#5 C:\xampp\htdocs\Pendaftaran_CI4\app\Models\AdminModel.php(22): CodeIgniter\BaseModel->first()
+#6 C:\xampp\htdocs\Pendaftaran_CI4\app\Controllers\Auth.php(23): App\Models\AdminModel->getAdminByUsername('enwoo_97')
+#7 C:\xampp\htdocs\Pendaftaran_CI4\vendor\codeigniter4\framework\system\CodeIgniter.php(942): App\Controllers\Auth->processLogin()
+#8 C:\xampp\htdocs\Pendaftaran_CI4\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#9 C:\xampp\htdocs\Pendaftaran_CI4\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\Pendaftaran_CI4\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\Pendaftaran_CI4\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2023-12-02 02:14:57 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'curd'
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `admin`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Models\AdminModel.php(22): CodeIgniter\BaseModel->first()
+ 6 APPPATH\Controllers\Auth.php(23): App\Models\AdminModel->getAdminByUsername('enwoo_97')
+ 7 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Auth->processLogin()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Pendaftaran_CI4\\public\\index.php')
+CRITICAL - 2023-12-02 02:17:12 --> "checkLogin" filter must have a matching alias defined.
+in SYSTEMPATH\Filters\Filters.php on line 354.
+ 1 SYSTEMPATH\Filters\Filters.php(354): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('checkLogin')
+ 2 SYSTEMPATH\CodeIgniter.php(467): CodeIgniter\Filters\Filters->enableFilter('checkLogin', 'before')
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Pendaftaran_CI4\\public\\index.php')
+CRITICAL - 2023-12-02 02:18:07 --> "checkLogin" filter must have a matching alias defined.
+in SYSTEMPATH\Filters\Filters.php on line 354.
+ 1 SYSTEMPATH\Filters\Filters.php(354): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('checkLogin')
+ 2 SYSTEMPATH\CodeIgniter.php(467): CodeIgniter\Filters\Filters->enableFilter('checkLogin', 'before')
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Pendaftaran_CI4\\public\\index.php')
+CRITICAL - 2023-12-02 02:18:09 --> "checkLogin" filter must have a matching alias defined.
+in SYSTEMPATH\Filters\Filters.php on line 354.
+ 1 SYSTEMPATH\Filters\Filters.php(354): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('checkLogin')
+ 2 SYSTEMPATH\CodeIgniter.php(467): CodeIgniter\Filters\Filters->enableFilter('checkLogin', 'before')
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Pendaftaran_CI4\\public\\index.php')
+CRITICAL - 2023-12-02 02:19:59 --> "checkLogin" filter must have a matching alias defined.
+in SYSTEMPATH\Filters\Filters.php on line 354.
+ 1 SYSTEMPATH\Filters\Filters.php(354): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('checkLogin')
+ 2 SYSTEMPATH\CodeIgniter.php(467): CodeIgniter\Filters\Filters->enableFilter('checkLogin', 'before')
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Pendaftaran_CI4\\public\\index.php')
+CRITICAL - 2023-12-02 02:20:08 --> "checkLogin" filter must have a matching alias defined.
+in SYSTEMPATH\Filters\Filters.php on line 354.
+ 1 SYSTEMPATH\Filters\Filters.php(354): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('checkLogin')
+ 2 SYSTEMPATH\CodeIgniter.php(467): CodeIgniter\Filters\Filters->enableFilter('checkLogin', 'before')
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Pendaftaran_CI4\\public\\index.php')
+CRITICAL - 2023-12-02 02:24:03 --> "checkLogin" filter must have a matching alias defined.
+in SYSTEMPATH\Filters\Filters.php on line 354.
+ 1 SYSTEMPATH\Filters\Filters.php(354): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('checkLogin')
+ 2 SYSTEMPATH\CodeIgniter.php(467): CodeIgniter\Filters\Filters->enableFilter('checkLogin', 'before')
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Pendaftaran_CI4\\public\\index.php')
+CRITICAL - 2023-12-02 02:24:08 --> "checkLogin" filter must have a matching alias defined.
+in SYSTEMPATH\Filters\Filters.php on line 354.
+ 1 SYSTEMPATH\Filters\Filters.php(354): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('checkLogin')
+ 2 SYSTEMPATH\CodeIgniter.php(467): CodeIgniter\Filters\Filters->enableFilter('checkLogin', 'before')
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Pendaftaran_CI4\\public\\index.php')
+CRITICAL - 2023-12-02 02:28:24 --> "checkLogin" filter must have a matching alias defined.
+in SYSTEMPATH\Filters\Filters.php on line 354.
+ 1 SYSTEMPATH\Filters\Filters.php(354): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('checkLogin')
+ 2 SYSTEMPATH\CodeIgniter.php(467): CodeIgniter\Filters\Filters->enableFilter('checkLogin', 'before')
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Pendaftaran_CI4\\public\\index.php')
+CRITICAL - 2023-12-02 02:28:26 --> "checkLogin" filter must have a matching alias defined.
+in SYSTEMPATH\Filters\Filters.php on line 354.
+ 1 SYSTEMPATH\Filters\Filters.php(354): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('checkLogin')
+ 2 SYSTEMPATH\CodeIgniter.php(467): CodeIgniter\Filters\Filters->enableFilter('checkLogin', 'before')
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Pendaftaran_CI4\\public\\index.php')
+CRITICAL - 2023-12-02 02:29:00 --> "checkLogin" filter must have a matching alias defined.
+in SYSTEMPATH\Filters\Filters.php on line 354.
+ 1 SYSTEMPATH\Filters\Filters.php(354): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('checkLogin')
+ 2 SYSTEMPATH\CodeIgniter.php(467): CodeIgniter\Filters\Filters->enableFilter('checkLogin', 'before')
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Pendaftaran_CI4\\public\\index.php')
+CRITICAL - 2023-12-02 02:29:03 --> "checkLogin" filter must have a matching alias defined.
+in SYSTEMPATH\Filters\Filters.php on line 354.
+ 1 SYSTEMPATH\Filters\Filters.php(354): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('checkLogin')
+ 2 SYSTEMPATH\CodeIgniter.php(467): CodeIgniter\Filters\Filters->enableFilter('checkLogin', 'before')
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Pendaftaran_CI4\\public\\index.php')
+CRITICAL - 2023-12-02 02:29:04 --> "checkLogin" filter must have a matching alias defined.
+in SYSTEMPATH\Filters\Filters.php on line 354.
+ 1 SYSTEMPATH\Filters\Filters.php(354): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('checkLogin')
+ 2 SYSTEMPATH\CodeIgniter.php(467): CodeIgniter\Filters\Filters->enableFilter('checkLogin', 'before')
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Pendaftaran_CI4\\public\\index.php')
+CRITICAL - 2023-12-02 02:29:04 --> "checkLogin" filter must have a matching alias defined.
+in SYSTEMPATH\Filters\Filters.php on line 354.
+ 1 SYSTEMPATH\Filters\Filters.php(354): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('checkLogin')
+ 2 SYSTEMPATH\CodeIgniter.php(467): CodeIgniter\Filters\Filters->enableFilter('checkLogin', 'before')
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Pendaftaran_CI4\\public\\index.php')
+CRITICAL - 2023-12-02 02:29:05 --> "checkLogin" filter must have a matching alias defined.
+in SYSTEMPATH\Filters\Filters.php on line 354.
+ 1 SYSTEMPATH\Filters\Filters.php(354): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('checkLogin')
+ 2 SYSTEMPATH\CodeIgniter.php(467): CodeIgniter\Filters\Filters->enableFilter('checkLogin', 'before')
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Pendaftaran_CI4\\public\\index.php')
+CRITICAL - 2023-12-02 02:29:05 --> "checkLogin" filter must have a matching alias defined.
+in SYSTEMPATH\Filters\Filters.php on line 354.
+ 1 SYSTEMPATH\Filters\Filters.php(354): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('checkLogin')
+ 2 SYSTEMPATH\CodeIgniter.php(467): CodeIgniter\Filters\Filters->enableFilter('checkLogin', 'before')
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Pendaftaran_CI4\\public\\index.php')
+CRITICAL - 2023-12-02 02:59:40 --> "checkLogin" filter must have a matching alias defined.
+in SYSTEMPATH\Filters\Filters.php on line 354.
+ 1 SYSTEMPATH\Filters\Filters.php(354): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('checkLogin')
+ 2 SYSTEMPATH\CodeIgniter.php(467): CodeIgniter\Filters\Filters->enableFilter('checkLogin', 'before')
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Pendaftaran_CI4\\public\\index.php')
